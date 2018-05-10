@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home | Poker Sharks</title>
+</head>
+<body class="container">
+    <!-- NAWIGACJA-->
+
+    <nav class="navbar">
+        <span class="navbar__parent">
+            <button class="navbar__open" onclick="openSideMenu()">
+                <svg class="navbar__hamburger">
+                <use xlink:href="img/sprite.svg#icon-bars"></use>
+                </svg>
+            </button>
+        </span>
+
+        <img src="img/logo.png" alt="Poker Sharks logo" class="navbar__logo">
+
+        <!-- GŁÓWNE LINKI NA PASKU-->
+        <ul class="navbar__list">
+            <li class="navbar__item">
+                <a href="#" class="navbar__link navbar__link--checked">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="#" class="navbar__link">Login</a>
+            </li>
+            <li class="navbar__item">
+                <a href="#" class="navbar__link">Courses</a>
+            </li>
+            <li class="navbar__item">
+                <a href="#" class="navbar__link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="side-nav">
+        <!-- btn close traktuje jako komponent-->
+        <button class="btn-close" onclick="closeSideMenu()">&times;</button>
+        <a class="side-nav__item side-nav__item--checked" href="#">Home</a>
+        <a class="side-nav__item" href="#">Login</a>
+        <a class="side-nav__item" href="#">Courses</a>
+        <a class="side-nav__item" href="#">Contact</a>
+
+        <img src="img/logo.png" alt="Poker Shark logo" class="side-nav__logo">
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header">
+        <div class="header__text">
+            <h1 class="header__text--main u-mbot-md">Become the crusher</h1>
+            <h2 class="header__text--secondary u-mbot-md">Join Poker Sharks</h2>
+            <a href="#" class="btn btn--primary u-mtop-md">Sign up</a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about u-mbot-sm">
+        <h2 class="heading-secondary u-mbot-sm"><span>Poker training at its finest</span></h2>
+        <div class="about__text">
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, labore! Deleniti exercitationem ipsa quae itaque doloribus dolor vitae consequuntur id libero magnam consequatur voluptatum eum, odio adipisci, maxime illo ullam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi libero provident quos rem at? Nam error incidunt beatae eaque temporibus.</p>
+        </div>
+    </section>
+
+    <!-- COACHES -->
+    <section class="coaches">
+        <h2 class="heading-secondary u-mbot-md">Meet our coaches</h2>
+        <div class="coaches__cards">
+        <div class="card u-mbot-sm">
+            <img src="img/coach1.jpeg" alt="Martin Johnson" class="card__photo">
+            <div class="card__description u-mtop-sm">
+                <ul class="card__list">
+                    <li class="card__name">Martin Johnson</li>
+                    <li>Online cash games crusher</li>
+                    <li>3.200.000&dollar; won in cash games</li>
+                    <li>Cash games coach</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card u-mtop-md">
+            <img src="img/coach2.jpeg" alt="John Doe" class="card__photo">
+            <div class="card__description u-mtop-sm">
+                <ul class="card__list">
+                    <li class="card__name">John Doe</li>
+                    <li>Online MTT beast</li>
+                    <li>2.500.000&dollar; won in tournaments</li>
+                    <li>MTT coach</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/coach4.jpeg" alt="Richard Fee" class="card__photo">
+            <div class="card__description">
+                <ul class="card__list">
+                    <li class="card__name">Richard Fee</li>
+                    <li>Spin&go hero</li>
+                    <li>2.250.000&dollar; won in spins</li>
+                    <li>Spin&go coach</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/coach3.jpeg" alt="Robert Smith" class="card__photo">
+            <div class="card__description">
+                <ul class="card__list">
+                    <li class="card__name">Robert Smith</li>
+                    <li>Mindset specialist</li>
+                    <li>Taking care of the work ethic</li>
+                    <li>Mindset coach</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- COURSES -->
+
+    <section class="courses">
+        <h2 class="heading-secondary heading-secondary--dark-blue">Choose your perfect course</h2>
+        <img src="img/plan.jpeg" alt="Plan" class="courses__photo">
+        <div class="courses__text">
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui deserunt consectetur tempora. Ducimus aperiam voluptas voluptatem aliquid provident mollitia, labore ea expedita a. Libero sint ducimus rerum illum laboriosam voluptatibus?</p>
+        </div>
+        <a href="#" class="btn btn--primary u-mtop-sm">Browse Courses</a>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="featured">
+        <h2 class="heading-secondary heading-secondary--red u-mbot-md"> Free strategy articles</h2>
+        <div class="featured__strats">
+        <div class="strategy u-mbot-sm">
+            <h4 class="heading-four">Bankroll Tips 2018</h4>
+            <img src="img/bankroll.jpeg" alt="bankroll" class="strategy__photo">
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla pariatur in doloribus blanditiis quasi animi iure molestias dolorum ipsa aspernatur!</p>
+            <a href="#" class="learn-btn">Learn more</a>
+        </div>
+        <div class="strategy">
+                <h4 class="heading-four">How to stay disciplined</h4>
+                <img src="img/discipline.jpeg" alt="discipline" class="strategy__photo">
+                <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, unde. Nemo eligendi quia distinctio id quibusdam laborum repudiandae tempore voluptate.</p>
+                <a href="#" class="learn-btn">Learn more</a>
+            </div>
+            <div class="strategy">
+                <h4 class="heading-four">How to create a perfect grind setup</h4>
+                <img src="img/setup.jpeg" alt="setup" class="strategy__photo">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias facere dignissimos quod maiores nam perferendis qui et consequuntur?</p>
+                <a href="#" class="learn-btn">Learn more</a>
+            </div>
+            <div class="strategy">
+                <h4 class="heading-four">How to exploit fishes postflop</h4>
+                <img src="img/fish.jpeg" alt="shark" class="strategy__photo">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, cum quas facilis illum vero tempore similique magnam amet culpa velit.</p>
+                <a href="#" class="learn-btn">Learn more</a>
+            </div>
+        </div>
+            <!-- DAJ JESZCZE DWA!-->
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h4 class="heading-four u-mbot-sm">Check out our social media!</h4>
+        <a href="#" class="footer__link">
+        <svg class="footer__icon">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+        </svg>
+        </a>
+        <a href="#" class="footer__link">
+        <svg class="footer__icon">
+            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+        </svg>
+        </a>
+        <p class="paragraph u-mtop-sm" >Copyright &copy; Marcin Kołodziej 2018</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
