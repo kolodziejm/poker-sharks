@@ -1,0 +1,19 @@
+.btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+    font-size: 3.8rem;
+    margin-left: 5rem;
+    text-decoration: none;
+    color: $color-light-red;
+    transition: all .5s;
+    background-color: $color-light-blue;
+    border:none;
+    cursor: pointer;
+    outline: none;
+    height: 1rem;
+
+    &:hover {
+        color: $color-black;
+    }
+}

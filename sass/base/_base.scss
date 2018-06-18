@@ -1,0 +1,33 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1 rem = 10px;
+
+    @include respond(sm) {
+        font-size: 65%;
+        overflow-x: hidden;
+    }
+
+    @include respond(md) {
+        font-size: 67.5%;
+    }
+
+    @include respond(lg) {
+        font-size: 70%;
+    }
+
+    @include respond(hg) {
+        font-size: 72.5%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-light;
+}

@@ -1,0 +1,32 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        display: inline-block;
+        transition: all .4s;
+        font-size: $default-font-size;
+       
+    }
+    &--primary {
+        text-transform: uppercase;
+        color: $color-light-red;
+        background-color: $color-light-cyan;
+        padding: 1rem 3rem;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 1.2rem 3rem rgba($color-black, .3);
+            color: $color-dark-blue;
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+            transform: translateY(2px);
+            box-shadow: 0 0.6rem 1.5rem rgba($color-black, .3);
+        }
+
+        
+    }
+}

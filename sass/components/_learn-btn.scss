@@ -1,0 +1,12 @@
+.learn-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    transition: all .4s;
+    font-size: $default-font-size;
+    text-decoration: none;
+    color: $color-light-red;
+
+    &:hover {
+        color:$color-dark-blue;
+    }
+}

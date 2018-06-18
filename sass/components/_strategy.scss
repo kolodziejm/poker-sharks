@@ -1,0 +1,33 @@
+.strategy {
+    max-width: 30rem;
+    margin: 1.5rem auto;
+    background-color: $color-light-cyan;
+    padding: 0 1rem;
+
+    &__photo {
+        margin-top: 1rem;
+        width: 100%;
+
+        @include respond(sm) {
+            width: 26rem;
+            height: 20rem;
+        }
+
+        // @include respond(hg) {
+        //     width: 28rem;
+        //     height: 19rem;
+        // }
+    }
+
+    // &__link {
+    //     display: inline-block;
+    //     margin-top: 1rem;
+    //     transition: all .4s;
+    //     font-size: $default-font-size;
+    //     text-decoration: none;
+
+    //     &:hover {
+    //         color:$color-light-red;
+    //     }
+    // }
+}

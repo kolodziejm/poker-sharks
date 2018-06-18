@@ -1,0 +1,45 @@
+.header {
+    height: 75vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-cyan, .9),
+        rgba($color-light-red, .9)
+    ), url(../img/header.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 1.5rem;
+
+        &--main {
+            color: $color-black;
+            font-weight: 300;
+            font-size: 4rem;
+
+            @include respond(lg) {
+                font-size: 5rem;
+            }
+
+            @include respond(hg) {
+                font-size: 6rem;
+            }
+        }
+
+        &--secondary {
+            color: $color-grey-dark;
+            font-size: 1.3rem;
+        }
+    }
+
+    @include respond(sm) {
+        grid-area: header;
+    }
+}

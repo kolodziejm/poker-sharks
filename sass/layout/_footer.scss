@@ -1,0 +1,16 @@
+.footer {
+    color: $color-light-cyan;
+    background-color: $color-black;
+    text-align: center;
+
+    &__icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    @include respond(sm) {
+        grid-area: footer;
+    }
+}

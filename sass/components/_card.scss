@@ -1,0 +1,29 @@
+.card {
+    margin: 1.5rem auto;
+    background-color: $color-light-red;
+    color: $color-light-cyan;
+    box-shadow: 0 1rem 2rem rgba($color-black, .6);
+    max-width: 25rem;
+
+    @include respond(hg) {
+        max-width: 27rem;
+    }
+
+    &__photo{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__description {
+        font-size: $default-font-size;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__name {
+        font-size: 2.4rem;
+        color: $color-dark-blue;
+    }
+}

@@ -1,0 +1,156 @@
+// Kod unikalny dla home
+
+.container {
+    @include respond(sm) {
+        display: grid;
+        grid-template-columns: 1fr 31rem 31rem 1fr;
+        grid-template-rows: 75vh repeat(5, min-content);
+        grid-template-areas: "header header header header"
+                             "about about about about"
+                             ". coaches coaches ."
+                             "courses courses courses courses"
+                             ". featured featured ."
+                             "footer footer footer footer";
+        grid-row-gap: 1rem;
+    }
+
+    @include respond(hg) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header header header header"
+                             "about about about about"
+                             "coaches coaches coaches coaches"
+                             "courses courses courses courses"
+                             "featured featured featured featured"
+                             "footer footer footer footer";
+    }
+}
+
+
+.content {
+    @include respond(sm) {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    @include respond(md) {
+        max-width: 1050px;
+        margin: 0 auto;
+    }
+
+    @include respond(lg) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    @include respond(hg) {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+
+
+.about {
+    padding: 2rem 1rem;
+    text-align: center;
+   background-color: $color-light;
+
+    span {
+        border-bottom: 1px solid $color-light-red;
+    }
+
+    @include respond(sm) {
+        grid-area: about;
+    }
+
+    @include respond(md) {
+        &__text {
+            width: 70%;
+            margin: 2rem auto;
+        }
+    }
+}
+
+.coaches {
+    background-color: $color-light-cyan;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    @include respond(sm) {
+        grid-area: coaches;
+    
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(25rem, auto));
+
+            @include respond(hg) {
+                grid-template-columns: repeat((4, minmax(25rem, auto)));
+            }
+        }
+
+    }
+
+   
+}
+
+.courses {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: $color-light-blue;
+
+    &__photo {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border: 3px solid $color-light-cyan;
+        box-shadow: 0 1rem 2rem rgba($color-black, .8);
+
+        @include respond(sm) {
+            max-width: 70%;
+        }
+
+        @include respond(md) {
+            width: 689px;
+            height: 471px;
+        }
+    }
+
+    @include respond(sm) {
+        grid-area: courses;
+    }
+
+    @include respond(md) {
+        &__text {
+            width: 70%;
+            margin: 2rem auto;
+        }
+    }
+
+
+}
+
+
+.featured {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: $color-light;
+
+    @include respond(sm) {
+        grid-area: featured;
+
+        &__strats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, min-content);
+            grid-column-gap: 1rem;
+
+            @include respond(hg) {
+                grid-template-columns: repeat((4, minmax(25rem, auto)));
+            }
+        }
+    }
+
+    
+}
+

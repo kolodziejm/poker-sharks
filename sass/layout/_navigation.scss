@@ -1,0 +1,139 @@
+.navbar {
+    background-color: $color-light-red;
+    border-bottom: 2px solid $color-light-cyan;
+    overflow: hidden;
+    height: 6.2rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 50;
+
+     // span
+    &__parent {
+        position: relative;
+    }
+
+   // button
+    &__open {
+        opacity: 1;
+        background-color: $color-light-red;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        bottom: .7rem;
+        left: 2rem;
+    }
+
+    &__hamburger {
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: $color-light-cyan;
+        // margin-left: 2rem;
+
+        @include respond(sm) {
+           display: none;
+        }
+    }
+
+    // ul
+    &__list {
+        width: 100%;
+        justify-content: flex-end;
+        display: none;
+
+        @include respond(sm) {
+            display: flex;
+        }
+    }
+
+    // li
+    &__item {
+        list-style-type: none;
+        border-bottom: 1px solid $color-light-red;
+        transition: all .8s;
+        
+        &:not(:last-child) {
+            margin-right: 4.5rem;
+        }
+
+        &:last-child {
+            margin-right: 2.5rem;
+        }
+    }
+
+    // a
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-light-cyan;
+        font-size: 1.4rem;
+        transition: all .4s;
+
+        &--checked {
+            color: $color-black;
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+    //img
+    &__logo {
+        width: 6.5rem;
+        height: 6.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        // font-size: 1.5rem;
+
+        @include respond(sm) {
+            top: 3.5rem;
+            left: 3.5rem;
+        }
+    }
+}
+
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: $color-light-blue;
+    opacity: 0.9;
+    overflow: hidden;
+    padding-top: 5rem;
+    transition: .6s;
+
+    &__item {
+        padding: 1rem 1rem 1rem 3rem;
+        text-decoration: none;
+        font-size: 2.2rem;
+        color: $color-light-cyan;
+        display: block;
+        transition: .4s;
+
+        &--checked {
+            color: $color-black;
+        }
+
+        &:hover {
+            color: $color-dark-blue;
+        }
+    }
+
+    &__logo {
+        width: 12rem;
+        height: 12rem;
+        display: block;
+        margin: 15rem 5rem 5rem 5rem;
+    }
+}
